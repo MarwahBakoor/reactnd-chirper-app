@@ -23,7 +23,7 @@ class TweetPage extends Component {
     }
 }
 function mapStateToProps({authedUser, tweets, users}, props) {
-    const id =props.mathc.params.id
+    const id =  props.match? props.match.params.id:''
     return {
         id,
         replies: !tweets[id]
